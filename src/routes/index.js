@@ -6,8 +6,13 @@ import JobsView from '../views/JobsView.vue';
 
 Vue.use(VueRouter);
 
-export default router = new VueRouter({
+export const router = new VueRouter({
+    mode: 'history',
     routes: [
+        {
+            path: '/',//redirect 바로 /news url로 access
+            redirect: '/news',
+        },
         {
             // path: url 주소
             path: '/news',
@@ -15,12 +20,13 @@ export default router = new VueRouter({
             component: NewsView,
         },
         {
-            path: '/ask',
+            path: '/asks',
             component: AskView,
         },
         {
             path: '/jobs',
             component: JobsView,
         },
+       
     ]
 });

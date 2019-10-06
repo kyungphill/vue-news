@@ -1,13 +1,15 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div>
+      Jobs
   </div>
 </template>
 
 <script>
 export default {
+
 }
 </script>
 
 <style>
+
 </style>

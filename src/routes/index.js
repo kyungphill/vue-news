@@ -7,7 +7,8 @@ import JobsView from '../views/JobsView.vue';
 Vue.use(VueRouter);
 
 export const router = new VueRouter({
-    mode: 'history',
+    mode: 'history', //url #값 제거 하는 기능
+    
     routes: [
         {
             path: '/',//redirect 바로 /news url로 access

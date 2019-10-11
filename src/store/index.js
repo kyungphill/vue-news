@@ -18,6 +18,10 @@ export const store = new Vuex.Store({
     getters: {
         fetchedAsk(state) {
            return state.ask;
+        },
+        
+        fetchedItem(state){
+            return state.item;
         }
 
     },

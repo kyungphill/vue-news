@@ -2,7 +2,6 @@
 <div>
   <list-item></list-item>
 </div>
-
 </template>
   <!-- <div>
     <ul class="ask-list">

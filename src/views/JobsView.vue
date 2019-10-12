@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <list-item></list-item>
+</template>
+  <!-- <div>
     <ul class="jobs-list">
       <li v-for="job in this.$store.state.jobs" class="post">
         <div class="points">
@@ -16,42 +18,21 @@
         </div>
       </li>
     </ul>
-  </div>
-</template>
-<script>
+  </div> -->
 
+<script>
+import ListItem from '../components/ListItem.vue';
 
 export default {
-  created() {
-    this.$store.dispatch('FETCH_JOBS'); 
+  components : {
+    ListItem,
+  },
+  // created() {
+    // this.$store.dispatch('FETCH_JOBS'); 
    // fetchJobsList()
    //    .then(response => this.jobs = response.data)
    //    .catch(error => console.log(error));
-  },
+  // },
 
 }
 </script>
-
-<style scoped>
-.jobs-list {
-  margin: 0;
-  padding: 0;
-}
-.post {
-  list-style: none; 
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-}
-.points {
-  width: 80px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #42b883;
-}
-.job-title {
-  margin: 0;
-}
-</style>

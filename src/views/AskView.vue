@@ -32,6 +32,9 @@ export default {
   components: {
     ListItem,
   },
+  created() {
+    this.$store.dispatch('FETCH_ASK');
+  },
 //  computed: {
 //    ...mapGetters([
 //      'fetchedAsk' //#4. 바로 fechedAsk변수 배열로 받아와서 쓰기

@@ -1,6 +1,10 @@
 <template>
     <div>
-        <user-profile></user-profile>
+        <user-profile>
+            <div slot="username">{{ userInfo.id }}</div>
+            <span slot="time">{{ 'Joined ' + userInfo.created }}, </span>
+            <span slot="karma">{{ userInfo.karma }}</span>
+        </user-profile>
         <!-- <p>name : {{ userInfo.id }}</p>
         <p>karma : {{ userInfo.karma }}</p>
         <p>created : {{ userInfo.created }}</p> -->
@@ -14,11 +18,17 @@ export default {
     components: {
         UserProfile,
     },
+    computed: {
+        userInfo() {
+            return this.$store.state.user;
+        }
+    },
     created() {
         const userName = this.$route.params.id;
         //userName을 전달해야해!!
         this.$store.dispatch('FETCH_USER', userName); 
     },
+    
 }
 </script>
 

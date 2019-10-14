@@ -20,6 +20,9 @@ function fetchJobsList() {
     // return axios.get(config.baseUrl + 'jobs/1.json');
     return axios.get(`${config.baseUrl}jobs/1.json`);
 }
+function fetchList(pageName) {
+    return axios.get(`${config.baseUrl}${pageName}/1.json`);
+}
 
 function fetchUserInfo(username) {
     //여기도 Back Quote로 문자리터럴 처리해주었음
@@ -31,10 +34,12 @@ function fetchItemInfo(id) {
     return axios.get(`${config.baseUrl}item/${id}.json`);
 }
 
+
 export {
     fetchNewsList,
     fetchAskList,
     fetchJobsList,
+    fetchList,
     fetchUserInfo,
     fetchItemInfo,
 }

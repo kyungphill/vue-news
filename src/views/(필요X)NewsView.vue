@@ -32,7 +32,7 @@ export default {
           console.log(error);
         });
     }, 3000);
-    }
+  },
    // fetchNewsList()
    //   .then(response => this.users = response.data)
    //   .catch(error => console.log(error));
